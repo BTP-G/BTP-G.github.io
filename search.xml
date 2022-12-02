@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>special bug---LNK2019</title>
+      <link href="/2022/12/02/bugs/"/>
+      <url>/2022/12/02/bugs/</url>
+      
+        <content type="html"><![CDATA[<p>开始看到这个错误警告的时候一脸懵逼，<br>翻来覆去最后是通过重新引用一遍头文件才解决的，<br>真实奇葩</p><p>——&gt;这告诉我们，自己写的时候尽量别在头文件里面引用头文件 :(</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> bug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>精华</title>
       <link href="/2022/11/29/jing-hua/"/>
       <url>/2022/11/29/jing-hua/</url>
