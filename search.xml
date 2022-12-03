@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>bug2😶</title>
+      <link href="/2022/12/03/bug2/"/>
+      <url>/2022/12/03/bug2/</url>
+      
+        <content type="html"><![CDATA[<p>power shell（其他控制台一样） 使用 UTF-8 字符集后在 vs 里面显示时就会乱码，暂时还不知道原因······</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> bug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>special bug---LNK2019</title>
       <link href="/2022/12/02/bugs/"/>
       <url>/2022/12/02/bugs/</url>
