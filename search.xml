@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>bug3😎</title>
+      <link href="/2022/12/08/bug3/"/>
+      <url>/2022/12/08/bug3/</url>
+      
+        <content type="html"><![CDATA[<h2 id="究极细的知识点1："><a href="#究极细的知识点1：" class="headerlink" title="究极细的知识点1："></a>究极细的知识点1：</h2><p>变量(非const)引用类型是不能引用<strong>临时变量(如右值)或者常量</strong>的</p><p>但是const引用既可以引用变量，也可以引用临时变量(如右值)或者常量，</p><p>所以某些地方使用const引用可以避免bug</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> bug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>类型名</title>
       <link href="/2022/12/07/c-zhong-de-lei-xing-ming/"/>
       <url>/2022/12/07/c-zhong-de-lei-xing-ming/</url>
