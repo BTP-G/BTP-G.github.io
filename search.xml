@@ -24,10 +24,10 @@
     
     <entry>
       <title>类型名</title>
-      <link href="/2022/12/07/c-zhong-de-lei-xing-ming/"/>
-      <url>/2022/12/07/c-zhong-de-lei-xing-ming/</url>
+      <link href="/2022/12/07/c-he-c-zhong-de-lei-xing-ming/"/>
+      <url>/2022/12/07/c-he-c-zhong-de-lei-xing-ming/</url>
       
-        <content type="html"><![CDATA[<h2 id="特殊"><a href="#特殊" class="headerlink" title="特殊"></a>特殊</h2><p>类型类型名</p><p>int arr[10]–&gt; int [10]    数组</p><p>int* p–&gt; int* 整形指针</p><p>int*p[10]  –&gt; int*  [10]指针数组 (int*代表存放数据的类型)</p><p>int (*p)[10]   –&gt; int  (*)[10]  数组指针(int代表存放数据的类型)</p><p>int* (*p)[10] –&gt; int*  (*)[10]    数组指针(指向指针数组的指针)</p><p>同理······</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="特殊"><a href="#特殊" class="headerlink" title="特殊"></a>特殊</h2><p>类型类型名</p><p>int arr[10]–&gt; int [10]    数组</p><p>int* p–&gt; int* 整形指针</p><p>int*p[10]  –&gt; int*  [10]指针数组 (int*代表存放数据的类型)</p><p>int (*p)[10]   –&gt; int  (*)[10]  数组指针(int代表存放数据的类型)</p><p>int* (*p)[10] –&gt; int*  (*)[10]    数组指针(指向指针数组的指针)</p><p>void (* pf[10]) () –&gt;           void (*[10]) () 函数指针数组（存放函数指针   void (*) ()    的数组）</p><p>同理······</p><p>（规律：去掉变量名，剩下的就是类型）（补充：对于数组，去掉数组名剩下的是数组类型，再去掉数组的元素个数 [x] 剩下的才是存放数据的类型）</p>]]></content>
       
       
       
