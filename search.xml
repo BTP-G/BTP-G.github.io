@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>知识点-指针</title>
+      <link href="/2022/12/20/knowledge2/"/>
+      <url>/2022/12/20/knowledge2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="关于指针运算"><a href="#关于指针运算" class="headerlink" title="关于指针运算"></a>关于指针运算</h1><p>·<strong>指针运算不改变指针类型</strong></p><p>​如：int arr[3] = { 1,2,3 };</p><p>​&amp;arr + 1;//&amp;arr表示整个数组的地址，+1跳过这个数组，虽然越界了，但是其类型仍然为 int (*) [3];</p><p>​这时就有 sizeof(*(&amp;arr + 1)) = 12; 这时sizeof计算的其实是 int [3] 这个类型的大小</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 知识 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>知识点-sizeof</title>
+      <link href="/2022/12/20/knowledge1/"/>
+      <url>/2022/12/20/knowledge1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="关于sizeof"><a href="#关于sizeof" class="headerlink" title="关于sizeof()"></a>关于sizeof()</h1><p>int main()</p><p>{</p><p>​short s = 4;//短整型</p><p>​int a = 5;//整形</p><p>​printf(“%d”, sizeof(s = a + 2));//这里打印的是 2 ，因为sizeof是通过类型来计算大小的 </p><p>​   //s = a + 2 这个表达式的类型是左值的类型，也就是short </p><p>​printf(“%d”, s);//这里打印的是 5 ，因为sizeof是不计算内部的语句的</p><p>​ //也就是不计算s = a + 2，只推断类型(函数的话，推断类型为其返回值的类型)</p><p>​return 0;</p><p>}</p><p><strong>·知识1：sizeof通过类型计算大小</strong></p><p><strong>·知识2：sizeof不计算内部的语句，只推断类型(函数的话，推断类型为其返回值的类型)</strong></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 知识 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>bug3😎</title>
       <link href="/2022/12/08/bug3/"/>
       <url>/2022/12/08/bug3/</url>
