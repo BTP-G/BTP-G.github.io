@@ -595,10 +595,10 @@
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                    究极细的知识点1：变量(非const)引用类型是不能引用临时变量(如右值)或者常量的
+                                    究极细的知识点1：变量(非const)引用类型是不能引用临时变量(如右值)或者常量的，
 但是const引用既可以引用变量，也可以引用临时变量(如右值)或者常量，
 所以某些地方使用const引用可以避免bug
-
+STL中的constconst修
                                 
                             </div>
                             <div class="publish-info">
@@ -767,8 +767,8 @@ int*p[10]		  –&gt;			 int*  [10
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                    开始看到这个错误警告的时候一脸懵逼，翻来覆去最后是通过重新引用一遍头文件才解决的，真实奇葩
-——&gt;这告诉我们，自己写的时候尽量别在头文件里面引用头文件 :(
+                                    开始看到这个错误警告的时候一脸懵逼，翻来覆去最后是通过重新引用一遍头文件才解决的，真实奇葩。
+——&gt;这告诉我们，自己的头文件别忘了加入防止多次引用的语句 :(
 
                                 
                             </div>
