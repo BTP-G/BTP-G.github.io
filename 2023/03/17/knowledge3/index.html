@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="bug2😶, 水银之家">
+    <meta name="keywords" content="知识点-预处理#define, 水银之家">
     <meta name="description" content="传奇の开始">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>bug2😶 | 水银之家</title>
+    <title>知识点-预处理#define | 水银之家</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">bug2😶</h1>
+                    <h1 class="description center-align post-title">知识点-预处理#define</h1>
                 </div>
             </div>
         </div>
@@ -433,8 +433,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/bug/">
-                                <span class="chip bg-color">bug</span>
+                            <a href="/tags/%E7%9F%A5%E8%AF%86/">
+                                <span class="chip bg-color">知识</span>
                             </a>
                         
                     </div>
@@ -449,7 +449,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-12-03
+                    2023-03-17
                 </div>
                 
 
@@ -458,7 +458,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    36
+                    101
                 </div>
                 
 
@@ -475,7 +475,18 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>power shell（其他控制台一样） 使用 UTF-8 字符集后在 vs 里面显示时就会乱码，暂时还不知道原因······</p>
+                <h1 id="define"><a href="#define" class="headerlink" title="#define"></a>#define</h1><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MALLOC(n, type) (type*)malloc(n*sizeof(type))</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="“-”"><a href="#“-”" class="headerlink" title="“#”"></a>“#”</h2><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> PRINT(mode, x) printf(<span class="string">"The value of "</span>#x<span class="string">" = "</span>mode, x)</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>这行代码的功能: 以mode的形式打印x的值</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line">PRINT(<span class="string">"%d"</span>, a);</span><br></pre></td></tr></tbody></table></figure>
+
+<p>输出: The value of a = 1</p>
+<p>也就是变量的名字会以字符串的形式替换掉 #x</p>
+<h2 id="“-”-1"><a href="#“-”-1" class="headerlink" title="“##”"></a>“##”</h2><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> contact(a, b) printf(<span class="string">"%c"</span>, a##b)</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>很怪就对了, 把变量名字拆开再传进去, 会自动连接😂</p>
 
                 
             </div>
@@ -502,7 +513,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://btp-g.github.io/2022/12/03/bug2/">https://btp-g.github.io/2022/12/03/bug2/</a>
+                    <a href="https://btp-g.github.io/2023/03/17/knowledge3/">https://btp-g.github.io/2023/03/17/knowledge3/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -540,8 +551,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/bug/">
-                                    <span class="chip bg-color">bug</span>
+                                <a href="/tags/%E7%9F%A5%E8%AF%86/">
+                                    <span class="chip bg-color">知识</span>
                                 </a>
                             
                         </div>
@@ -711,17 +722,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/12/07/c-he-c-zhong-de-lei-xing-ming/">
+                <a href="/2023/03/17/knowledge3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="类型名">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="知识点-预处理#define">
                         
-                        <span class="card-title">类型名</span>
+                        <span class="card-title">知识点-预处理#define</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -731,9 +743,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-07
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -742,6 +754,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -760,13 +773,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/12/02/bugs/">
+                <a href="/2022/12/20/knowledge2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="special bug---LNK2019">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="知识点-指针">
                         
-                        <span class="card-title">special bug---LNK2019</span>
+                        <span class="card-title">知识点-指针</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -777,7 +790,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-20
                             </span>
                         <span class="publish-author">
                             
@@ -790,8 +803,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/bug/">
-                        <span class="chip bg-color">bug</span>
+                    <a href="/tags/%E7%9F%A5%E8%AF%86/">
+                        <span class="chip bg-color">知识</span>
                     </a>
                     
                 </div>

@@ -4,11 +4,30 @@
   
     
     <entry>
+      <title>知识点-预处理#define</title>
+      <link href="/2023/03/17/knowledge3/"/>
+      <url>/2023/03/17/knowledge3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="define"><a href="#define" class="headerlink" title="#define"></a>#define</h1><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MALLOC(n, type) (type*)malloc(n*sizeof(type))</span></span><br></pre></td></tr></tbody></table></figure><h2 id="“-”"><a href="#“-”" class="headerlink" title="“#”"></a>“#”</h2><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> PRINT(mode, x) printf(<span class="string">"The value of "</span>#x<span class="string">" = "</span>mode, x)</span></span><br></pre></td></tr></tbody></table></figure><p>这行代码的功能: 以mode的形式打印x的值</p><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line">PRINT(<span class="string">"%d"</span>, a);</span><br></pre></td></tr></tbody></table></figure><p>输出: The value of a = 1</p><p>也就是变量的名字会以字符串的形式替换掉 #x</p><h2 id="“-”-1"><a href="#“-”-1" class="headerlink" title="“##”"></a>“##”</h2><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> contact(a, b) printf(<span class="string">"%c"</span>, a##b)</span></span><br></pre></td></tr></tbody></table></figure><p>很怪就对了, 把变量名字拆开再传进去, 会自动连接😂</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 知识 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>知识点-指针</title>
       <link href="/2022/12/20/knowledge2/"/>
       <url>/2022/12/20/knowledge2/</url>
       
-        <content type="html"><![CDATA[<h1 id="关于指针运算"><a href="#关于指针运算" class="headerlink" title="关于指针运算"></a>关于指针运算</h1><p>·<strong>指针运算不改变指针类型</strong></p><p>​如：int arr[3] = { 1,2,3 };</p><p>​&amp;arr + 1;//&amp;arr表示整个数组的地址，+1跳过这个数组，虽然越界了，但是其类型仍然为 int (*) [3];</p><p>​这时就有 sizeof(*(&amp;arr + 1)) = 12; 这时sizeof计算的其实是 int [3] 这个类型的大小</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="关于指针运算"><a href="#关于指针运算" class="headerlink" title="关于指针运算"></a>关于指针运算</h1><p>·<strong>指针运算不改变指针类型</strong></p><p>​如：int arr[3] = { 1,2,3 };</p><p>​&amp;arr + 1;//&amp;arr表示整个数组的地址，+1跳过这个数组，虽然越界了，但是其类型仍然为 int (*) [3];</p><p>​这时就有 sizeof(*(&amp;arr + 1)) = 12; 这时sizeof计算的其实是 int [3] 这个类型的大小</p><h1 id="关于数据结构中的指针常见用法"><a href="#关于数据结构中的指针常见用法" class="headerlink" title="关于数据结构中的指针常见用法"></a>关于数据结构中的指针常见用法</h1><p>·<strong>多指针</strong></p><p>​一般有双指针、三指针、快慢指针</p>]]></content>
       
       
       
