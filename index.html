@@ -615,9 +615,10 @@
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                关于指针运算·指针运算不改变指针类型
-​	如：int arr[3] = { 1,2,3 };
-​			&amp;arr + 1;//&amp;arr表示整个数组的地址，+1跳过这个数组，虽然越界了，但是其类型仍然为 int (*) [3];
+                                关于指针运算·指针运算不改变指针类型如：
+123int arr[3] = { 1,2,3 };&amp;arr + 1;  //&amp;arr表示整个数组的地址，+1跳过这个数组，虽然越界了，但是其类型仍然为 int (*) [3];
+
+
                             
                         </div>
                         <div class="publish-info">
@@ -660,11 +661,7 @@
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                关于sizeof()int main()
-{
-​	short s = 4;//短整型
-​	int a = 5;//整形
-​	printf(“%d”, sizeof(s = a + 2));//这里打印的是 2 ，因为sizeof是通过类型来
+                                关于sizeof()12345678910111213141516171819int main(){​ short s = 4;  //短整型​ int a = 5;  //整形​ printf("%d", sizeof(s = a + 2
                             
                         </div>
                         <div class="publish-info">
@@ -707,10 +704,10 @@
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                究极细的知识点1：变量(非const)引用类型是不能引用临时变量(如右值)或者常量的，
+                                究极细的知识点1变量(非const)引用类型是不能引用临时变量(如右值)或者常量的，
 但是const引用既可以引用变量，也可以引用临时变量(如右值)或者常量，
 所以某些地方使用const引用可以避免bug
-STL中的constconst修
+STL中的constconst修饰
                             
                         </div>
                         <div class="publish-info">
@@ -753,10 +750,7 @@ STL中的constconst修
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                特殊类型									类型名
-int arr[10]		–&gt;			 int [10]  		  数组
-int* p				–&gt;			 int*				 整形指针
-int*p[10]		  –&gt;			 int*  [10
+                                常见类型（左）及其类型名（右）1234567891011int arr[10];         //--&gt;     int [10]  数组int* p;              //--&gt;     int*  整形指针in
                             
                         </div>
                         <div class="publish-info">

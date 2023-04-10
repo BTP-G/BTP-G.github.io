@@ -475,15 +475,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="特殊"><a href="#特殊" class="headerlink" title="特殊"></a>特殊</h2><p>类型									类型名</p>
-<p>int arr[10]		–&gt;			 int [10]  		  数组</p>
-<p>int* p				–&gt;			 int*				 整形指针</p>
-<p>int*p[10]		  –&gt;			 int*  [10]		指针数组 (int*代表存放数据的类型)</p>
-<p>int (*p)[10]	   –&gt;			 int  (*)[10] 	 数组指针(int代表存放数据的类型)</p>
-<p>int* (*p)[10]	 –&gt;			 int*  (*)[10]    数组指针(指向指针数组的指针)</p>
-<p>void (* pf[10]) () –&gt;           void (*[10]) () 函数指针数组（存放函数指针   void (*) ()    的数组）</p>
-<p>同理······</p>
-<p>（规律：去掉变量名，剩下的就是类型）（补充：对于数组，去掉数组名剩下的是数组类型，再去掉数组的元素个数 [x] 剩下的才是存放数据的类型）</p>
+                <h1 id="常见类型（左）及其类型名（右）"><a href="#常见类型（左）及其类型名（右）" class="headerlink" title="常见类型（左）及其类型名（右）"></a>常见类型（左）及其类型名（右）</h1><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> arr[<span class="number">10</span>];         <span class="comment">//--&gt;     int [10]  数组</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* p;              <span class="comment">//--&gt;     int*  整形指针</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* p[<span class="number">10</span>];          <span class="comment">//--&gt;     int* [10]  指针数组 (int*代表存放数据的类型)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> (*p)[<span class="number">10</span>];        <span class="comment">//--&gt;     int (*)[10]  数组指针(int 代表存放数据的类型)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* (*p)[<span class="number">10</span>];       <span class="comment">//--&gt;     int* (*)[10]  数组指针(指向指针数组的指针)</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> (* pf[<span class="number">10</span>]) ();  <span class="comment">//--&gt;     void (*[10]) ()  函数指针数组（存放函数指针 void (*) () 的数组）</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>其他同理······</p>
+<p>（规律：去掉变量名，剩下的就是类型。对于数组，去掉数组名剩下的是数组类型，再去掉数组的 [x] 剩下的才是存放数据的类型）</p>
 
                 
             </div>

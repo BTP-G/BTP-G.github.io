@@ -475,12 +475,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="关于指针运算"><a href="#关于指针运算" class="headerlink" title="关于指针运算"></a>关于指针运算</h1><p>·<strong>指针运算不改变指针类型</strong></p>
-<p>​	如：int arr[3] = { 1,2,3 };</p>
-<p>​			&amp;arr + 1;//&amp;arr表示整个数组的地址，+1跳过这个数组，虽然越界了，但是其类型仍然为 int (*) [3];</p>
-<p>​	这时就有 sizeof(*(&amp;arr + 1)) = 12; 这时sizeof计算的其实是 int [3] 这个类型的大小</p>
-<h1 id="关于数据结构中的指针常见用法"><a href="#关于数据结构中的指针常见用法" class="headerlink" title="关于数据结构中的指针常见用法"></a>关于数据结构中的指针常见用法</h1><p>·<strong>多指针</strong></p>
-<p>​	一般有双指针、三指针、快慢指针</p>
+                <h1 id="关于指针运算"><a href="#关于指针运算" class="headerlink" title="关于指针运算"></a>关于指针运算</h1><h2 id="·指针运算不改变指针类型"><a href="#·指针运算不改变指针类型" class="headerlink" title="·指针运算不改变指针类型"></a>·指针运算不改变指针类型</h2><p>如：</p>
+<figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int arr[3] = { 1,2,3 };</span><br><span class="line"></span><br><span class="line">&amp;arr + 1;  //&amp;arr表示整个数组的地址，+1跳过这个数组，虽然越界了，但是其类型仍然为 int (*) [3];</span><br></pre></td></tr></tbody></table></figure>
+
+<p>这时就有 sizeof(*(&amp;arr + 1)) = 12; 这时sizeof计算的其实是 int [3] 这个类型的大小</p>
+<h1 id="关于数据结构中的指针常见用法"><a href="#关于数据结构中的指针常见用法" class="headerlink" title="关于数据结构中的指针常见用法"></a>关于数据结构中的指针常见用法</h1><h2 id="·多指针"><a href="#·多指针" class="headerlink" title="·多指针"></a>·多指针</h2><p>一般有双指针、三指针、快慢指针</p>
 
                 
             </div>

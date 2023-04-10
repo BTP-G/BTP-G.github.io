@@ -458,7 +458,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    101
+                    122
                 </div>
                 
 
@@ -479,14 +479,16 @@
 
 <h2 id="“-”"><a href="#“-”" class="headerlink" title="“#”"></a>“#”</h2><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> PRINT(mode, x) printf(<span class="string">"The value of "</span>#x<span class="string">" = "</span>mode, x)</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p>这行代码的功能: 以mode的形式打印x的值</p>
+<p>上面这行代码的功能: 以 mode 的形式打印 x 的值</p>
 <figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> a = <span class="number">1</span>;</span><br><span class="line">PRINT(<span class="string">"%d"</span>, a);</span><br></pre></td></tr></tbody></table></figure>
 
-<p>输出: The value of a = 1</p>
+<p>上面的输出：</p>
+<figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The value of a = <span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+
 <p>也就是变量的名字会以字符串的形式替换掉 #x</p>
 <h2 id="“-”-1"><a href="#“-”-1" class="headerlink" title="“##”"></a>“##”</h2><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> contact(a, b) printf(<span class="string">"%c"</span>, a##b)</span></span><br></pre></td></tr></tbody></table></figure>
 
-<p>很怪就对了, 把变量名字拆开再传进去, 会自动连接😂</p>
+<p>很怪就对了，连接传入的字符，一般可以把变量名字拆开再传进去, 会自动连接该变量名 😂</p>
 
                 
             </div>
