@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2023/04/18/knowledge4/"/>
+      <url>/2023/04/18/knowledge4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="pragma-once-和-ifndef"><a href="#pragma-once-和-ifndef" class="headerlink" title="#pragma once 和 #ifndef"></a>#pragma once 和 #ifndef</h1><p>作用都是为了避免同一个被 #include 多次，或者避免头文件嵌套包含（参照前置声明的笔记）。需要特别注意的是：</p><ul><li><p>#pragma once 并不是 C++的原生语法，而是编译器的一种支持，所以并不是所有的编译器都能够支持。#ifndef 则为 C++的标准。</p></li><li><p>#ifndef 依赖于不重复的宏名称，保证了包含在 #endif 的内容不会被重复包含，这个内容可以是一个文件的所有内容，或者仅仅是一段代码。而 #pragma once 则是针对物理文件的一个标记，标记该文件不会被 #include 多次，不能只针对文件中某段代码进行标记。而且，#pragma once 不能保证多个文件的拷贝不会被重复包含，但这种错误更容易发现，且 #pragma once 大大提高了编译效率。</p></li><li><p>一般建议用 #pragma once，因为一个类声明和定义各占用一个物理文件，即使类声明之外的内容，也应该是和该类有关，比如非模板类中声明了模板接口，则需要在同一个文件定义该模板接口。</p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 知识 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>知识点-预处理#define</title>
       <link href="/2023/03/17/knowledge3/"/>
       <url>/2023/03/17/knowledge3/</url>
@@ -27,7 +46,7 @@
       <link href="/2022/12/20/knowledge2/"/>
       <url>/2022/12/20/knowledge2/</url>
       
-        <content type="html"><![CDATA[<h1 id="关于指针运算"><a href="#关于指针运算" class="headerlink" title="关于指针运算"></a>关于指针运算</h1><h2 id="·指针运算不改变指针类型"><a href="#·指针运算不改变指针类型" class="headerlink" title="·指针运算不改变指针类型"></a>·指针运算不改变指针类型</h2><p>如：</p><figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">int arr[3] = { 1,2,3 };</span><br><span class="line"></span><br><span class="line">&amp;arr + 1;  //&amp;arr表示整个数组的地址，+1跳过这个数组，虽然越界了，但是其类型仍然为 int (*) [3];</span><br></pre></td></tr></tbody></table></figure><p>这时就有 sizeof(*(&amp;arr + 1)) = 12; 这时sizeof计算的其实是 int [3] 这个类型的大小</p><h1 id="关于数据结构中的指针常见用法"><a href="#关于数据结构中的指针常见用法" class="headerlink" title="关于数据结构中的指针常见用法"></a>关于数据结构中的指针常见用法</h1><h2 id="·多指针"><a href="#·多指针" class="headerlink" title="·多指针"></a>·多指针</h2><p>一般有双指针、三指针、快慢指针</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="关于指针运算"><a href="#关于指针运算" class="headerlink" title="关于指针运算"></a>关于指针运算</h1><h2 id="·指针运算不改变指针类型"><a href="#·指针运算不改变指针类型" class="headerlink" title="·指针运算不改变指针类型"></a>·指针运算不改变指针类型</h2><p>如：</p><figure class="highlight text"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int arr[3] = { 1,2,3 };</span><br><span class="line">&amp;arr + 1;  //&amp;arr表示整个数组的地址，+1跳过这个数组，虽然越界了，但是其类型仍然为 int (*) [3];</span><br></pre></td></tr></tbody></table></figure><p>这时就有 sizeof(*(&amp;arr + 1)) = 12; 这时 sizeof 计算的其实是 int [3] 这个类型的大小</p><h1 id="关于数据结构中的指针常见用法"><a href="#关于数据结构中的指针常见用法" class="headerlink" title="关于数据结构中的指针常见用法"></a>关于数据结构中的指针常见用法</h1><h2 id="·多指针"><a href="#·多指针" class="headerlink" title="·多指针"></a>·多指针</h2><p>一般有双指针、三指针、快慢指针</p>]]></content>
       
       
       
@@ -46,7 +65,7 @@
       <link href="/2022/12/20/knowledge1/"/>
       <url>/2022/12/20/knowledge1/</url>
       
-        <content type="html"><![CDATA[<h1 id="关于sizeof"><a href="#关于sizeof" class="headerlink" title="关于sizeof()"></a>关于sizeof()</h1><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line"></span><br><span class="line">{</span><br><span class="line"></span><br><span class="line">​ <span class="type">short</span> s = <span class="number">4</span>;  <span class="comment">//短整型</span></span><br><span class="line"></span><br><span class="line">​ <span class="type">int</span> a = <span class="number">5</span>;  <span class="comment">//整形</span></span><br><span class="line"></span><br><span class="line">​ <span class="built_in">printf</span>(<span class="string">"%d"</span>, <span class="keyword">sizeof</span>(s = a + <span class="number">2</span>));  <span class="comment">//这里打印的是 2 ，因为sizeof是通过类型来计算大小的</span></span><br><span class="line"></span><br><span class="line">​                                   <span class="comment">//s = a + 2 这个表达式的类型是左值的类型，也就是short</span></span><br><span class="line"></span><br><span class="line">​ <span class="built_in">printf</span>(<span class="string">"%d"</span>, s);  <span class="comment">//这里打印的是 5 ，因为sizeof是不计算内部的语句的</span></span><br><span class="line"></span><br><span class="line">​                   <span class="comment">//也就是不计算s = a + 2，只推断类型(函数的话，推断类型为其返回值的类型)</span></span><br><span class="line"></span><br><span class="line">​ <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p>·知识1：sizeof通过类型计算大小</p><p>·知识2：sizeof不计算内部的语句，只推断类型(函数的话，推断类型为其返回值的类型)</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="关于-sizeof"><a href="#关于-sizeof" class="headerlink" title="关于 sizeof()"></a>关于 sizeof()</h1><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">​ <span class="type">short</span> s = <span class="number">4</span>;  <span class="comment">//短整型</span></span><br><span class="line">​ <span class="type">int</span> a = <span class="number">5</span>;  <span class="comment">//整形</span></span><br><span class="line">​ <span class="built_in">printf</span>(<span class="string">"%d"</span>, <span class="keyword">sizeof</span>(s = a + <span class="number">2</span>));  <span class="comment">//这里打印的是 2 ，因为sizeof是通过类型来计算大小的</span></span><br><span class="line">​                                   <span class="comment">//s = a + 2 这个表达式的类型是左值的类型，也就是short</span></span><br><span class="line">​ <span class="built_in">printf</span>(<span class="string">"%d"</span>, s);  <span class="comment">//这里打印的是 5 ，因为sizeof是不计算内部的语句的</span></span><br><span class="line">​                   <span class="comment">//也就是不计算s = a + 2，只推断类型(函数的话，推断类型为其返回值的类型)</span></span><br><span class="line">​ <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p>·知识点 1：sizeof 通过类型计算大小</p><p>·知识点 2：sizeof 不计算内部的语句，只推断类型(函数的话，推断类型为其返回值的类型)</p>]]></content>
       
       
       
@@ -84,7 +103,7 @@
       <link href="/2022/12/07/c-he-c-zhong-de-lei-xing-ming/"/>
       <url>/2022/12/07/c-he-c-zhong-de-lei-xing-ming/</url>
       
-        <content type="html"><![CDATA[<h1 id="常见类型（左）及其类型名（右）"><a href="#常见类型（左）及其类型名（右）" class="headerlink" title="常见类型（左）及其类型名（右）"></a>常见类型（左）及其类型名（右）</h1><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> arr[<span class="number">10</span>];         <span class="comment">//--&gt;     int [10]  数组</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* p;              <span class="comment">//--&gt;     int*  整形指针</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* p[<span class="number">10</span>];          <span class="comment">//--&gt;     int* [10]  指针数组 (int*代表存放数据的类型)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> (*p)[<span class="number">10</span>];        <span class="comment">//--&gt;     int (*)[10]  数组指针(int 代表存放数据的类型)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* (*p)[<span class="number">10</span>];       <span class="comment">//--&gt;     int* (*)[10]  数组指针(指向指针数组的指针)</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> (* pf[<span class="number">10</span>]) ();  <span class="comment">//--&gt;     void (*[10]) ()  函数指针数组（存放函数指针 void (*) () 的数组）</span></span><br></pre></td></tr></tbody></table></figure><p>其他同理······</p><p>（规律：去掉变量名，剩下的就是类型。对于数组，去掉数组名剩下的是数组类型，再去掉数组的 [x] 剩下的才是存放数据的类型）</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="常见类型（左）及其类型名（右）"><a href="#常见类型（左）及其类型名（右）" class="headerlink" title="常见类型（左）及其类型名（右）"></a>常见类型（左）及其类型名（右）</h1><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> arr[<span class="number">10</span>];         <span class="comment">//--&gt;     int [10]  数组</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* p;              <span class="comment">//--&gt;     int*  整形指针</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* p[<span class="number">10</span>];          <span class="comment">//--&gt;     int* [10]  指针数组 (int*代表存放数据的类型)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> (*p)[<span class="number">10</span>];        <span class="comment">//--&gt;     int (*)[10]  数组指针(int 代表存放数据的类型)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* (*p)[<span class="number">10</span>];       <span class="comment">//--&gt;     int* (*)[10]  数组指针(指向指针数组的指针)</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> (* pf[<span class="number">10</span>]) ();  <span class="comment">//--&gt;     void (*[10]) ()  函数指针数组（存放函数指针 void (*) () 的数组）</span></span><br></pre></td></tr></tbody></table></figure><p>其他同理······</p><p>规律：去掉变量名，剩下的就是类型。对于数组，去掉数组名剩下的是数组类型，再去掉数组的 [x] 剩下的才是存放数据的类型</p>]]></content>
       
       
       
@@ -118,11 +137,30 @@
     
     
     <entry>
-      <title>special bug---LNK2019</title>
+      <title>BUG目录</title>
       <link href="/2022/12/02/bugs/"/>
       <url>/2022/12/02/bugs/</url>
       
-        <content type="html"><![CDATA[<p>开始看到这个错误警告的时候一脸懵逼，翻来覆去最后是通过重新引用一遍头文件才解决的，真实奇葩。</p><p>——&gt;这告诉我们，自己的头文件别忘了加入防止多次引用的语句 :(</p>]]></content>
+        <content type="html"><![CDATA[<h2 id="special-bug—LNK2019"><a href="#special-bug—LNK2019" class="headerlink" title="special bug—LNK2019"></a>special bug—LNK2019</h2><p>开始看到这个错误警告的时候一脸懵逼，翻来覆去最后是通过重新引用一遍头文件才解决的，真实奇葩。</p><p>——&gt;这告诉我们，自己的头文件别忘了加入防止多次引用的语句 :(</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> bug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>bug1</title>
+      <link href="/2022/12/02/bug1/"/>
+      <url>/2022/12/02/bug1/</url>
+      
+        <content type="html"><![CDATA[]]></content>
       
       
       

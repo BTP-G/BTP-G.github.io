@@ -458,7 +458,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    164
+                    166
                 </div>
                 
 
@@ -475,10 +475,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="关于sizeof"><a href="#关于sizeof" class="headerlink" title="关于sizeof()"></a>关于sizeof()</h1><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span></span><br><span class="line"></span><br><span class="line">{</span><br><span class="line"></span><br><span class="line">​ <span class="type">short</span> s = <span class="number">4</span>;  <span class="comment">//短整型</span></span><br><span class="line"></span><br><span class="line">​ <span class="type">int</span> a = <span class="number">5</span>;  <span class="comment">//整形</span></span><br><span class="line"></span><br><span class="line">​ <span class="built_in">printf</span>(<span class="string">"%d"</span>, <span class="keyword">sizeof</span>(s = a + <span class="number">2</span>));  <span class="comment">//这里打印的是 2 ，因为sizeof是通过类型来计算大小的</span></span><br><span class="line"></span><br><span class="line">​                                   <span class="comment">//s = a + 2 这个表达式的类型是左值的类型，也就是short</span></span><br><span class="line"></span><br><span class="line">​ <span class="built_in">printf</span>(<span class="string">"%d"</span>, s);  <span class="comment">//这里打印的是 5 ，因为sizeof是不计算内部的语句的</span></span><br><span class="line"></span><br><span class="line">​                   <span class="comment">//也就是不计算s = a + 2，只推断类型(函数的话，推断类型为其返回值的类型)</span></span><br><span class="line"></span><br><span class="line">​ <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+                <h1 id="关于-sizeof"><a href="#关于-sizeof" class="headerlink" title="关于 sizeof()"></a>关于 sizeof()</h1><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> {</span><br><span class="line">​ <span class="type">short</span> s = <span class="number">4</span>;  <span class="comment">//短整型</span></span><br><span class="line">​ <span class="type">int</span> a = <span class="number">5</span>;  <span class="comment">//整形</span></span><br><span class="line">​ <span class="built_in">printf</span>(<span class="string">"%d"</span>, <span class="keyword">sizeof</span>(s = a + <span class="number">2</span>));  <span class="comment">//这里打印的是 2 ，因为sizeof是通过类型来计算大小的</span></span><br><span class="line">​                                   <span class="comment">//s = a + 2 这个表达式的类型是左值的类型，也就是short</span></span><br><span class="line">​ <span class="built_in">printf</span>(<span class="string">"%d"</span>, s);  <span class="comment">//这里打印的是 5 ，因为sizeof是不计算内部的语句的</span></span><br><span class="line">​                   <span class="comment">//也就是不计算s = a + 2，只推断类型(函数的话，推断类型为其返回值的类型)</span></span><br><span class="line">​ <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<p>·知识1：sizeof通过类型计算大小</p>
-<p>·知识2：sizeof不计算内部的语句，只推断类型(函数的话，推断类型为其返回值的类型)</p>
+<p>·知识点 1：sizeof 通过类型计算大小</p>
+<p>·知识点 2：sizeof 不计算内部的语句，只推断类型(函数的话，推断类型为其返回值的类型)</p>
 
                 
             </div>
@@ -997,7 +997,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">1.7k</span>&nbsp;字
+                class="white-color">2k</span>&nbsp;字
             
             
             

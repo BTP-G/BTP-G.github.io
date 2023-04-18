@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="类型名, 水银之家">
+    <meta name="keywords" content="水银之家">
     <meta name="description" content="传奇の开始">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>类型名 | 水银之家</title>
+    <title>水银之家</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -312,12 +312,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">类型名</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -449,7 +449,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-12-07
+                    2023-04-18
                 </div>
                 
 
@@ -458,7 +458,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    162
+                    306
                 </div>
                 
 
@@ -475,10 +475,15 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="常见类型（左）及其类型名（右）"><a href="#常见类型（左）及其类型名（右）" class="headerlink" title="常见类型（左）及其类型名（右）"></a>常见类型（左）及其类型名（右）</h1><figure class="highlight c"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> arr[<span class="number">10</span>];         <span class="comment">//--&gt;     int [10]  数组</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* p;              <span class="comment">//--&gt;     int*  整形指针</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* p[<span class="number">10</span>];          <span class="comment">//--&gt;     int* [10]  指针数组 (int*代表存放数据的类型)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> (*p)[<span class="number">10</span>];        <span class="comment">//--&gt;     int (*)[10]  数组指针(int 代表存放数据的类型)</span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span>* (*p)[<span class="number">10</span>];       <span class="comment">//--&gt;     int* (*)[10]  数组指针(指向指针数组的指针)</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> (* pf[<span class="number">10</span>]) ();  <span class="comment">//--&gt;     void (*[10]) ()  函数指针数组（存放函数指针 void (*) () 的数组）</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>其他同理······</p>
-<p>规律：去掉变量名，剩下的就是类型。对于数组，去掉数组名剩下的是数组类型，再去掉数组的 [x] 剩下的才是存放数据的类型</p>
+                <h1 id="pragma-once-和-ifndef"><a href="#pragma-once-和-ifndef" class="headerlink" title="#pragma once 和 #ifndef"></a>#pragma once 和 #ifndef</h1><p>作用都是为了避免同一个被 #include 多次，或者避免头文件嵌套包含（参照前置声明的笔记）。需要特别注意的是：</p>
+<ul>
+<li><p>#pragma once 并不是 C++的原生语法，而是编译器的一种支持，所以并不是所有的编译器都能够支持。#ifndef 则为 C++的标准。</p>
+</li>
+<li><p>#ifndef 依赖于不重复的宏名称，保证了包含在 #endif 的内容不会被重复包含，这个内容可以是一个文件的所有内容，或者仅仅是一段代码。而 #pragma once 则是针对物理文件的一个标记，标记该文件不会被 #include 多次，不能只针对文件中某段代码进行标记。而且，#pragma once 不能保证多个文件的拷贝不会被重复包含，但这种错误更容易发现，且 #pragma once 大大提高了编译效率。</p>
+</li>
+<li><p>一般建议用 #pragma once，因为一个类声明和定义各占用一个物理文件，即使类声明之外的内容，也应该是和该类有关，比如非模板类中声明了模板接口，则需要在同一个文件定义该模板接口。</p>
+</li>
+</ul>
 
                 
             </div>
@@ -505,7 +510,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://btp-g.github.io/2022/12/07/c-he-c-zhong-de-lei-xing-ming/">https://btp-g.github.io/2022/12/07/c-he-c-zhong-de-lei-xing-ming/</a>
+                    <a href="https://btp-g.github.io/2023/04/18/knowledge4/">https://btp-g.github.io/2023/04/18/knowledge4/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -714,17 +719,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/12/08/bug3/">
+                <a href="/2023/04/18/knowledge4/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="bug3😎">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">bug3😎</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -734,9 +740,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -745,11 +751,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/bug/">
-                        <span class="chip bg-color">bug</span>
+                    <a href="/tags/%E7%9F%A5%E8%AF%86/">
+                        <span class="chip bg-color">知识</span>
                     </a>
                     
                 </div>
@@ -763,13 +770,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/12/03/bug2/">
+                <a href="/2023/03/17/knowledge3/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="bug2😶">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="知识点-预处理#define">
                         
-                        <span class="card-title">bug2😶</span>
+                        <span class="card-title">知识点-预处理#define</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -780,7 +787,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-03
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-17
                             </span>
                         <span class="publish-author">
                             
@@ -793,8 +800,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/bug/">
-                        <span class="chip bg-color">bug</span>
+                    <a href="/tags/%E7%9F%A5%E8%AF%86/">
+                        <span class="chip bg-color">知识</span>
                     </a>
                     
                 </div>
